@@ -1,0 +1,358 @@
+.spFormButton
+{
+	position         : relative;
+	margin           : 0.5rem 0rem !important;
+	width            : auto;
+	height           : 1.8rem;
+	overflow         : hidden !important;
+	border-width     : 0;
+	outline          : none !important;
+	border-radius    : 2px !important;
+	box-shadow       : 0 1px 4px rgba(0, 0, 0, .6);
+	background-color : theme-color("secondary-dark");
+	color            : theme-color("primary-text");
+	display          : flex;
+	justify-content  : center;
+	cursor           : pointer;
+	align-items      : center;
+	white-space      : nowrap;
+    overflow-wrap    : normal;
+	transition       : background-color .3s;
+		-webkit-transition : background-color .3s;
+		-moz-transition    : background-color .3s;
+		-ms-transition     : background-color .3s;
+		-o-transition      : background-color .3s;
+
+	&:hover
+	{
+		background-color : theme-color("secondary");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("secondary-dark");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("secondary");
+	}
+
+	&:before
+	{
+		content          : "";
+		position         : absolute;
+		top              : 50%;
+		left             : 50%;
+		display          : block;
+		width            : 0;
+		padding-top      : 0;
+		border-radius    : 100%;
+		background-color : rgba(236, 240, 241, .3);
+		transform        : translate(-50%, -50%);
+			-webkit-transform : translate(-50%, -50%);
+			-moz-transform    : translate(-50%, -50%);
+			-ms-transform     : translate(-50%, -50%);
+			-o-transform      : translate(-50%, -50%);
+	}
+
+	&:active:before
+	{
+		width       : 120%;
+		padding-top : 120%;
+
+		transition: width .2s ease-out, padding-top .2s ease-out;
+			-webkit-transition : width .2s ease-out, padding-top .2s ease-out;
+			-moz-transition    : width .2s ease-out, padding-top .2s ease-out;
+			-ms-transition     : width .2s ease-out, padding-top .2s ease-out;
+			-o-transition      : width .2s ease-out, padding-top .2s ease-out;
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("primary-text-dark"), 50%);
+		cursor           : not-allowed;
+		color            : darken(theme-color("primary-text"), 20%);
+	}
+}
+
+.spFormButtonPrimary
+{
+	background-color : theme-color("primary");
+
+	&:hover
+	{
+		background-color : theme-color("primary-light");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("primary-dark");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("primary");
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("primary-dark"), 20%);
+		color            : darken(theme-color("primary-text"), 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonPrimaryLight
+{
+	background-color : theme-color("primary-light");
+
+	&:hover
+	{
+		background-color : theme-color("primary");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("primary-light");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("primary");
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("primary-light"), 20%);
+		color            : darken(theme-color("primary-text"), 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonPrimaryDark
+{
+	background-color : theme-color("primary-dark");
+
+	&:hover
+	{
+		background-color : theme-color("primary");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("primary-dark");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("primary");
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("primary-dark"), 20%);
+		color            : darken(theme-color("primary-text"), 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonSecondary
+{
+	background-color : theme-color("secondary");
+
+	&:hover
+	{
+		background-color : theme-color("secondary-light");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("secondary-dark");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("secondary");
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("secondary-dark"), 20%);
+		color            : darken(theme-color("secondary-text"), 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonSecondaryLight
+{
+	background-color : theme-color("secondary-light");
+
+	&:hover
+	{
+		background-color : theme-color("secondary");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("secondary-light");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("secondary");
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("secondary-light"), 20%);
+		color            : darken(theme-color("secondary-text"), 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonSecondaryDark
+{
+	background-color : theme-color("secondary-dark");
+
+	&:hover
+	{
+		background-color : theme-color("secondary");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("secondary-dark");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("secondary");
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("secondary-dark"), 20%);
+		color            : darken(theme-color("secondary-text"), 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonDanger
+{
+	background-color : theme-color("danger");
+
+	&:hover
+	{
+		background-color : theme-color("danger-light");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("danger");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("danger-light");
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("danger"), 20%);
+		color            : darken(theme-color("primary-text"), 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonSuccess
+{
+	background-color : theme-color("success");
+
+	&:hover
+	{
+		background-color : theme-color("success-light");
+	}
+
+	&:focus
+	{
+		background-color : theme-color("success");
+	}
+
+	&:focus:hover
+	{
+		background-color : theme-color("success-light");
+	}
+
+	&:disabled
+	{
+		background-color : darken(theme-color("success"), 20%);
+		color            : darken(theme-color("primary-text"), 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonLight
+{
+	background-color : #EEEEEE;
+	color            : #000000;
+
+	&:hover
+	{
+		background-color : #BCBCBC;
+	}
+
+	&:focus
+	{
+		background-color : #EEEEEE;
+	}
+
+	&:focus:hover
+	{
+		background-color : #BCBCBC;
+	}
+
+	&:disabled
+	{
+		background-color : darken(#EEEEEE, 20%);
+		cursor           : not-allowed;
+	}
+}
+
+.spFormButtonSlim
+{
+	font-size   : 0.8rem !important;
+	line-height : 0.8rem;
+	height      : 1.3rem !important;
+}
+
+.spFormButtonFixedSmall
+{
+	min-width : 3rem !important;
+}
+
+.spFormButtonFixedMedium
+{
+	min-width : 5rem !important;
+}
+
+.spFormButtonFixedLarge
+{
+	min-width : 8rem !important;
+}
+
+.spFormButtonAlignRight
+{
+	margin-left : auto !important;
+}
+
+.spFormButtonAlignLeft
+{
+	margin-right : auto !important;
+}
+
+.spFormButtonAlignCenter
+{
+	margin-right : auto !important;
+	margin-left  : auto !important;
+}

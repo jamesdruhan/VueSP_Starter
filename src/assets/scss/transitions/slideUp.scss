@@ -1,0 +1,94 @@
+.transitionSlideUp-enter-active
+{
+	transition : all .3s ease;
+		-webkit-transition : all .3s ease;
+		-moz-transition    : all .3s ease;
+		-ms-transition     : all .3s ease;
+		-o-transition      : all .3s ease;
+}
+
+.transitionSlideUp-leave-active
+{
+	transition : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-webkit-transition : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-moz-transition    : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-ms-transition     : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-o-transition      : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.transitionSlideUp-enter
+{
+	transform : translateX(-20px);
+		-webkit-transform : translateX(-20px);
+		-moz-transform    : translateX(-20px);
+		-ms-transform     : translateX(-20px);
+		-o-transform      : translateX(-20px);
+	opacity   : 0;
+}
+
+.transitionSlideUp-leave-to
+{
+	transform : translateX(20px);
+		-webkit-transform : translateX(20px);
+		-moz-transform    : translateX(20px);
+		-ms-transform     : translateX(20px);
+		-o-transform      : translateX(20px);
+	opacity   : 0;
+}
+
+.transitionSlideUpThenUp-enter-active
+{
+	transition : all .3s ease;
+		-webkit-transition : all .3s ease;
+		-moz-transition    : all .3s ease;
+		-ms-transition     : all .3s ease;
+		-o-transition      : all .3s ease;
+}
+
+.transitionSlideUpThenUp-leave-active
+{
+	transition : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-webkit-transition : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-moz-transition    : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-ms-transition     : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-o-transition      : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.transitionSlideUpThenUp-enter
+{
+	transform : translateX(-20px);
+		-webkit-transform : translateX(-20px);
+		-moz-transform    : translateX(-20px);
+		-ms-transform     : translateX(-20px);
+		-o-transform      : translateX(-20px);
+	opacity   : 0;
+}
+
+.transitionSlideUpThenUp-leave-to
+{
+	transform : translateX(-20px);
+		-webkit-transform : translateX(-20px);
+		-moz-transform    : translateX(-20px);
+		-ms-transform     : translateX(-20px);
+		-o-transform      : translateX(-20px);
+	opacity   : 0;
+}
+
+.transitionSlideUpThenNone-enter-active
+{
+	transition : all .3s ease;
+		-webkit-transition : all .3s ease;
+		-moz-transition    : all .3s ease;
+		-ms-transition     : all .3s ease;
+		-o-transition      : all .3s ease;
+}
+
+.transitionSlideUpThenNone-enter
+{
+	transform : translateY(-20px);
+		-webkit-transform : translateY(-20px);
+		-moz-transform    : translateY(-20px);
+		-ms-transform     : translateY(-20px);
+		-o-transform      : translateY(-20px);
+	opacity   : 0;
+}

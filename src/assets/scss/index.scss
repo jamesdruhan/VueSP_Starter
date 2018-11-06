@@ -1,0 +1,127 @@
+// *****************************************************************
+// Start point for Vue application styling. Enable/disable the style
+// options below depending on your application needs.
+// *****************************************************************
+
+// -------------
+// Colour Themes
+// -------------
+
+$theme-colors :
+(
+	"primary"             : #546E7A,
+	"primary-light"       : #819CA9,
+	"primary-dark"        : #29434E,
+	"primary-text"        : #FFFFFF,
+	"primary-text-dark"   : #E0E0E0,
+	"secondary"           : #7A6054,
+	"secondary-light"     : #AA8D80,
+	"secondary-dark"      : #4D362B,
+	"secondary-text"      : #FFFFFF,
+	"secondary-text-dark" : #E0E0E0,
+	"neutral"		      : #F5F5F6,
+	"neutral-dark"        : #CFD8DC,
+	"neutral-text"        : #212121,
+	"required"            : #DC3545,
+	"error"               : #FF867C,
+	"danger"              : #AB000D,
+	"danger-light"        : #E53935,
+	"success"             : #388E3C,
+	"success-light"       : #6ABF69,
+);
+
+// ----------------------------------
+// Bootstrap Import - Excludes Reboot
+// ----------------------------------
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/root";
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+// @import "~bootstrap/scss/code";
+// @import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+// @import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/buttons";
+// @import "~bootstrap/scss/transitions";
+// @import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+// @import "~bootstrap/scss/input-group";
+// @import "~bootstrap/scss/custom-forms";
+// @import "~bootstrap/scss/nav";
+// @import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/card";
+// @import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/jumbotron";
+// @import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+// @import "~bootstrap/scss/media";
+// @import "~bootstrap/scss/list-group";
+// @import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/modal";
+// @import "~bootstrap/scss/tooltip";
+// @import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/utilities";
+// @import "~bootstrap/scss/print";
+
+// -----------------------------------------------------------------
+// SharePoint Overrides - These styles override SharePoint defaults.
+// -----------------------------------------------------------------
+
+@import "./sharepoint/formModel_HideRibbon.scss";
+@import "./sharepoint/form_GeneralFormatting.scss";
+
+// -------------------
+// Customized Vue Form
+// -------------------
+
+@import "./forms/spForm.scss";
+
+// ------------------
+// Font Awesome Icons
+// ------------------
+
+// https://fontawesome.com/icons?d=gallery&m=free
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+// ------------------------------
+// General Vue SharePoint Styling
+// ------------------------------
+
+// Primary VueJS Container - Includes Reboot of Elements.
+@import "./containers/vueContainer.scss";
+
+// ---------------------
+// Vue Transition Styles
+// ---------------------
+
+// Fade transition for Vue.
+@import "./transitions/fade.scss";
+@import "./transitions/slideDown.scss";
+@import "./transitions/slideLeft.scss";
+@import "./transitions/slideUp.scss";
+
+// ---------------
+// SCSS Animations
+// ---------------
+
+@import "./animations/pulse.scss";
+
+// ----------------
+// Component Styles
+// ----------------
+
+@import "./components/spMessenger.scss";
+@import "./components/spTable.scss";
+
+// -------------------
+// User Custom Styling
+// -------------------
+
+@import "./custom.scss";

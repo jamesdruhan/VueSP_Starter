@@ -1,0 +1,24 @@
+// -------------------------------------------------------
+// These stylings override existing SharePoint 2013 styles
+// -------------------------------------------------------
+
+// Element : List Item Web Part Container
+// Purpose : Remove the bottom margin to help square the vue container.
+.ms-dialog .ms-webpartzone-cell
+{
+	margin-bottom : 0px;
+}
+
+// Element : List Item Content Table.
+// Purpose : Expands the table to 100% width to ensure content within spans correctly.
+#onetIDListForm
+{
+	width       : 100% !important;
+}
+
+// Element : List Item Content Box.
+// Purpose : Balances the right/top sides of the content to account for a random SharePoint padding-left of 5px.
+#DeltaPlaceHolderMain
+{
+	padding-top   : 5px;
+}

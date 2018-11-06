@@ -1,0 +1,88 @@
+$pulseScale0   : 1;
+$pulseScale50  : 0.95;
+$pulseScale100 : 1;
+
+@keyframes "pulse"
+{
+    0%
+    {
+        transform : scale($pulseScale0);
+            -webkit-transform : scale($pulseScale0);
+            -moz-transform    : scale($pulseScale0);
+            -o-transform      : scale($pulseScale0);
+            -ms-transform     : scale($pulseScale0);
+    }
+    50%
+    {
+        transform : scale($pulseScale50);
+            -webkit-transform : scale($pulseScale50);
+            -moz-transform    : scale($pulseScale50);
+            -o-transform      : scale($pulseScale50);
+            -ms-transform     : scale($pulseScale50);
+    }
+    100%
+    {
+        transform : scale($pulseScale100);
+            -webkit-transform : scale($pulseScale100);
+            -moz-transform    : scale($pulseScale100);
+            -o-transform      : scale($pulseScale100);
+            -ms-transform     : scale($pulseScale100);
+    }
+}
+
+@-moz-keyframes pulse
+{
+    0%
+    {
+        transform : scale($pulseScale0);
+            -moz-transform : scale($pulseScale0);
+    }
+    50%
+    {
+        transform : scale($pulseScale50);
+            -moz-transform : scale($pulseScale50);
+    }
+    100%
+    {
+        transform : scale($pulseScale100);
+            -moz-transform : scale($pulseScale100);
+    }
+}
+
+@-webkit-keyframes "pulse"
+{
+    0%
+    {
+        transform : scale($pulseScale0);
+         -webkit-transform : scale($pulseScale0);
+    }
+    50%
+    {
+        transform : scale($pulseScale50);
+            -webkit-transform : scale($pulseScale50);
+    }
+    100%
+    {
+        transform : scale($pulseScale100);
+            -webkit-transform : scale($pulseScale100);
+    }
+}
+
+@-ms-keyframes "pulse"
+{
+    0%
+    {
+        transform : scale($pulseScale0);
+            -ms-transform : scale($pulseScale0);
+    }
+    50%
+    {
+        transform : scale($pulseScale50);
+            -ms-transform : scale($pulseScale50);
+    }
+    100%
+    {
+        transform : scale($pulseScale100);
+            -ms-transform : scale($pulseScale100);
+    }
+}

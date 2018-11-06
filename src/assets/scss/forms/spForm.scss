@@ -1,0 +1,555 @@
+@import "./spButton.scss";
+
+$formMaxWidth : 30rem;
+$formMinWidth : 25rem;
+
+.spForm
+{
+	width           : 100%;
+	position        : relative;
+	font-size       : 0.9rem;
+	font-family     : 'Roboto';
+	font-weight     : 300;
+	display         : flex;
+	flex-direction  : column;
+	flex-wrap       : nowrap;
+	justify-content : center;
+	align-items     : center;
+	margin          : 5rem 0rem;
+	background      : theme-color("primary-dark");
+	color           : theme-color("primary-text");
+	padding         : 2.5rem 2rem;
+
+	&:before, &:after
+	{
+		position       : absolute;
+		content        : '';
+		pointer-events : none;
+		left           : 50%;
+		width          : 50px;
+		height         : 50px;
+		transform      : translateX(-50%) rotate(45deg);
+			-webkit-transform : translateX(-50%) rotate(45deg);
+			-moz-transform    : translateX(-50%) rotate(45deg);
+			-ms-transform     : translateX(-50%) rotate(45deg);
+			-o-transform      : translateX(-50%) rotate(45deg);
+	}
+
+	&:before
+	{
+		top        : -25px;
+		background : inherit;
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-webkit-box-shadow : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-moz-box-shadow    : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-o-box-shadow      : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+	}
+
+	&:after
+	{
+		bottom     : -25px;
+	    z-index    : 10;
+		background : inherit;
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-webkit-box-shadow : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-moz-box-shadow    : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-o-box-shadow 	   : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+	}
+
+	.spFormTitle
+	{
+		font-family    : 'Roboto Slab';
+		text-transform : uppercase;
+		font-size      : 1.5rem;
+		font-weight    : 400;
+		margin-bottom  : 2rem;
+		text-align     : center;
+	}
+
+	.spFormSubTitle
+	{
+		font-family    : 'Roboto Slab';
+		text-transform : uppercase;
+		font-size      : 1.2rem;
+		font-weight    : 300;
+		margin-bottom  : 2rem;
+		text-align     : center;
+	}
+
+	.spFormHeader
+	{
+		font-size     : 0.9rem;
+	    margin-bottom : 0.5rem;
+	    font-weight   : 500;
+	}
+
+	.spFormInput
+	{
+		display        : flex;
+	    flex-direction : column;
+	    align-items    : flex-start;
+	    max-width      : $formMaxWidth;
+		min-width      : $formMinWidth;
+	    width          : 100%;
+		position       : relative;
+		margin-bottom  : 1.5rem;
+
+		label
+		{
+			width     : 100%;
+			font-size : 1rem;
+		}
+
+		.spFormInputBorder
+		{
+			height           : 100%;
+			background-color : theme-color("primary");
+			width            : 0.25rem;
+			position         : absolute;
+			left             : -1.3rem;
+		}
+
+		.spFormInputDescription
+		{
+			width     : 100%;
+			font-size : 0.8rem;
+			color     : theme-color("primary-text-dark");
+		}
+
+		.spFormInputText
+		{
+			width            : 100%;
+			margin-top       : 0.3rem;
+			outline          : none;
+			display          : block;
+			padding          : 0.375rem 0.75rem;
+			font-size        : 0.8rem;
+			color            : theme-color("primary-dark");
+			background-color : #FFF;
+			background-clip  : border-box;
+			border           : 1px solid theme-color("primary");
+			border-radius    : 0.15rem;
+			height           : 1.7rem;
+
+			&:disabled
+			{
+				background-color : #AEAEAE;
+				cursor           : not-allowed;
+			}
+		}
+
+		.spFormInputNote
+		{
+			height : auto;
+		}
+
+		.spFormInputUser
+		{
+			width    : 100%;
+			position : relative;
+
+			.spFormInputUserResults
+			{
+				display          : flex;
+    			flex-direction   : column;
+				background-color : #FFF;
+				color            : theme-color("primary-dark");
+				width            : 100%;
+				background-clip  : border-box;
+				border           : 1px solid theme-color("primary");
+				padding          : 0.375rem 0.75rem;
+				position         : absolute;
+				z-index          : 9999;
+				max-height       : 12.9rem;
+				overflow-x       : hidden;
+				overflow-y       : scroll;
+				white-space      : nowrap;
+
+				.spFormInputUserResultsItem
+				{
+					display         : flex;
+					justify-content : space-between;
+					padding         : 0.1rem 0rem;
+				    width           : 100%;
+					cursor          : pointer;
+					flex            : 0 0 auto;
+
+					span
+					{
+						overflow-x    : hidden;
+					    text-overflow : ellipsis;
+					    overflow-y    : hidden;
+					    white-space   : nowrap;
+						flex          : 1;
+					}
+				}
+
+				.highlight
+				{
+					background-color : theme-color("primary-light");
+					color            : theme-color("primary-text");
+				}
+			}
+		}
+
+		.spFormInputMultiChoice
+		{
+			width          : 100%;
+		    display        : flex;
+		    flex-direction : column;
+			margin-top     : 0.4rem;
+
+			.spFormInputMultiChoiceItem
+			{
+				display        : flex;
+				flex-direction : row;
+				width          : 100%;
+			    margin-top     : 0.4rem;
+				align-items    : center;
+				text-align     : left;
+				position       : relative;
+
+				label
+				{
+					font-size     : 0.8rem;
+					margin-bottom : 0rem;
+					word-break    : break-all;
+					cursor        : pointer;
+
+
+					&:before, &:after
+					{
+						content  : "";
+						position : absolute;
+						left     : 0;
+						top      : 0;
+					}
+
+					&:before
+					{
+						width         : 0.8rem;
+						height        : 0.8rem;
+						background    : #fff;
+						border        : 2px solid theme-color("primary");;
+						border-radius : 0.125em;
+						cursor        : pointer;
+						transition    : background .3s;
+					}
+
+					&:after
+					{
+
+					}
+				}
+
+				input
+				{
+					outline      : 0;
+					visibility   : hidden;
+					width        : 2rem;
+					margin       : 0;
+				    display      : block;
+				    float        : left;
+
+					&:disabled
+					{
+						+ label
+						{
+							cursor : not-allowed;
+						}
+
+						+ label:before
+						{
+							background : #AEAEAE;
+							cursor     : not-allowed;
+						}
+					}
+
+					&:checked
+					{
+						+ label:before
+						{
+							background : theme-color("primary-dark");
+        					border     : none;
+						}
+
+						+ label:after
+						{
+							transform          : translate(0.16rem, 0.15rem) rotate(-45deg);
+							width              : 0.5rem;
+			  				height             : 0.3rem;
+							border             : 0.1rem solid #FFF;
+							border-top-style   : none;
+							border-right-style : none;
+						}
+					}
+				}
+			}
+		}
+
+		.spFormInputError
+		{
+			width      : 100%;
+			font-size  : 0.8rem;
+			color      : theme-color("error");
+		    margin-top : 0.5rem;
+
+			i
+			{
+			    padding-right : 0.4rem;
+				margin-top    : 0.2rem;
+			}
+		}
+
+		.spFormInputRequired
+		{
+			color     : theme-color("required");
+			position  : absolute;
+			top       : 0.15rem;
+			right     : 0;
+			font-size : 0.7rem;
+		}
+	}
+
+	.spFormControls
+	{
+		display         : flex;
+		flex-direction  : row;
+		max-width       : $formMaxWidth;
+		width           : 100%;
+		position        : relative;
+	    margin-top      : 0.5rem;
+	}
+}
+
+.formColour-primary
+{
+	background : theme-color("primary");
+	color      : theme-color("primary-text");
+
+	&:before
+	{
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("primary"), 50px -50px 0 theme-color("primary");
+			-webkit-box-shadow : -50px 50px 0 theme-color("primary"), 50px -50px 0 theme-color("primary");
+			-moz-box-shadow    : -50px 50px 0 theme-color("primary"), 50px -50px 0 theme-color("primary");
+			-o-box-shadow      : -50px 50px 0 theme-color("primary"), 50px -50px 0 theme-color("primary");
+	}
+
+	&:after
+	{
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("primary"), 50px -50px 0 theme-color("primary");
+			-webkit-box-shadow : -50px 50px 0 theme-color("primary"), 50px -50px 0 theme-color("primary");
+			-moz-box-shadow    : -50px 50px 0 theme-color("primary"), 50px -50px 0 theme-color("primary");
+			-o-box-shadow      : -50px 50px 0 theme-color("primary"), 50px -50px 0 theme-color("primary");
+	}
+}
+
+.formColour-primary-dark
+{
+	background : theme-color("primary-dark");
+	color      : theme-color("primary-text");
+
+	&:before
+	{
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-webkit-box-shadow : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-moz-box-shadow    : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-o-box-shadow      : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+	}
+
+	&:after
+	{
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-webkit-box-shadow : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-moz-box-shadow    : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+			-o-box-shadow      : -50px 50px 0 theme-color("primary-dark"), 50px -50px 0 theme-color("primary-dark");
+	}
+}
+
+.formColour-secondary
+{
+	background : theme-color("secondary");
+	color      : theme-color("secondary-text");
+
+	&:before
+	{
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("secondary"), 50px -50px 0 theme-color("secondary");
+			-webkit-box-shadow : -50px 50px 0 theme-color("secondary"), 50px -50px 0 theme-color("secondary");
+			-moz-box-shadow    : -50px 50px 0 theme-color("secondary"), 50px -50px 0 theme-color("secondary");
+			-o-box-shadow      : -50px 50px 0 theme-color("secondary"), 50px -50px 0 theme-color("secondary");
+	}
+
+	&:after
+	{
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("secondary"), 50px -50px 0 theme-color("secondary");
+			-webkit-box-shadow : -50px 50px 0 theme-color("secondary"), 50px -50px 0 theme-color("secondary");
+			-moz-box-shadow    : -50px 50px 0 theme-color("secondary"), 50px -50px 0 theme-color("secondary");
+			-o-box-shadow      : -50px 50px 0 theme-color("secondary"), 50px -50px 0 theme-color("secondary");
+	}
+}
+
+.formColour-secondary-dark
+{
+	background : theme-color("secondary-dark");
+	color      : theme-color("secondary-text");
+
+	&:before
+	{
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("secondary-dark"), 50px -50px 0 theme-color("secondary-dark");
+		-webkit-box-shadow : -50px 50px 0 theme-color("secondary-dark"), 50px -50px 0 theme-color("secondary-dark");
+		-moz-box-shadow    : -50px 50px 0 theme-color("secondary-dark"), 50px -50px 0 theme-color("secondary-dark");
+		-o-box-shadow      : -50px 50px 0 theme-color("secondary-dark"), 50px -50px 0 theme-color("secondary-dark");
+	}
+
+	&:after
+	{
+		z-index    : 1;
+		box-shadow : -50px 50px 0 theme-color("secondary-dark"), 50px -50px 0 theme-color("secondary-dark");
+		-webkit-box-shadow : -50px 50px 0 theme-color("secondary-dark"), 50px -50px 0 theme-color("secondary-dark");
+		-moz-box-shadow    : -50px 50px 0 theme-color("secondary-dark"), 50px -50px 0 theme-color("secondary-dark");
+		-o-box-shadow      : -50px 50px 0 theme-color("secondary-dark"), 50px -50px 0 theme-color("secondary-dark");
+	}
+}
+
+.formBlend
+{
+	margin  : -5rem 0rem;
+	z-index : 9999;
+}
+
+.formNoBottom
+{
+	&:after
+	{
+		display : none;
+	}
+}
+
+.formTop
+{
+	&:before
+	{
+		display : none;
+	}
+}
+
+.spinningLoad
+{
+	&:after
+	{
+		font-family  : 'Font Awesome 5 Free';
+		content      : "\f110";
+		font-weight  : 900;
+		align-self   : center;
+		position     : absolute;
+		color        : theme-color("primary-dark");
+		right        : 0.5rem;
+		top          : 0.65rem;
+		animation    : spin 0.7s linear infinite;
+			-webkit-animation : spin 0.7s linear infinite;
+			-moz-animation    : spin 0.7s linear infinite;
+	}
+}
+
+.successIcon
+{
+	&:after
+	{
+		font-family  : 'Font Awesome 5 Free';
+		content      : "\f058";
+		font-weight  : 900;
+		align-self   : center;
+		position     : absolute;
+		color        : theme-color("success");
+		right        : 0.5rem;
+		top          : 0.65rem;
+	}
+}
+
+.lockedIcon
+{
+	&:after
+	{
+		font-family  : 'Font Awesome 5 Free';
+		content      : "\f023";
+		font-weight  : 900;
+		align-self   : center;
+		position     : absolute;
+		color        : theme-color("primary-dark");
+		right        : 0.5rem;
+		top          : 0.65rem;
+	}
+}
+
+@keyframes spin
+{
+	100%
+	{
+		-webkit-transform : rotate(360deg); transform:rotate(360deg);
+	}
+}
+
+@-moz-keyframes spin
+{
+	100%
+	{
+		-webkit-transform : rotate(360deg); transform:rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin
+{
+	100%
+	{
+		-webkit-transform : rotate(360deg); transform:rotate(360deg);
+	}
+}
+
+.noSelect
+{
+	user-select : none;
+		-webkit-touch-callout : none;
+		-webkit-user-select   : none;
+		-khtml-user-select    : none;
+		-moz-user-select      : none;
+		-ms-user-select       : none;
+
+}
+
+.alignRight
+{
+	text-align : right !important;
+}
+
+.justifyCenter
+{
+	justify-content : center !important;
+}
+
+@media print
+{
+	.spForm
+	{
+		margin      : 0rem 0rem !important;
+		padding-top : 0rem !important;
+
+		.agreeZone
+		{
+			margin : 0rem 0rem;
+		}
+
+		&:before, &:after
+		{
+			display : none !important;
+		}
+	}
+}

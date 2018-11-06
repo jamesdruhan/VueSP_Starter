@@ -1,0 +1,10 @@
+// -------------------------------------------------------
+// These stylings override existing SharePoint 2013 styles
+// -------------------------------------------------------
+
+// Element : List Form Ribbon (Save / Cancel / etc.)
+// Purpose : Remove (hide) the ribbon from the form.
+.ms-dialog #ms-designer-ribbon
+{
+	display : none !important;
+}

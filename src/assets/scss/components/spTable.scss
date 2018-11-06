@@ -1,0 +1,926 @@
+.spTableContainer
+{
+	$tableDataBackgroundColour : #F5F5F6;
+	$tableSmallBorderColur     : #CFD8DC;
+	$tableCellPadding          : 0rem 0.8rem;
+	$tableFontSize             : 0.9rem;
+	$tableRowHeight            : 2.5rem;
+	$tableHeight               : $tableRowHeight * 11 + 0.2rem;
+	$tableBodyHeight           : $tableRowHeight * 10;
+
+	font-family     : 'Roboto';
+	font-weight     : 300;
+	display         : flex;
+	flex-direction  : column;
+	flex-wrap       : nowrap;
+	justify-content : center;
+	align-items     : center;
+	width           : calc(100% - 2rem);
+	margin-left     : 1rem;
+	box-shadow      : 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+		-webkit-box-shadow : 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+		-moz-box-shadow    : 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+	.spTableTopBorder
+	{
+		height           : 0.3rem;
+		width            : 100%;
+		background-color : theme-color("primary-dark");
+	}
+
+	.spTableControls
+	{
+		display          : flex;
+		flex-direction   : row;
+		flex-wrap        : wrap;
+		align-self       : center;
+		align-items      : center;
+		width            : 100%;
+		color            : theme-color("primary-text");
+		background-color : theme-color("primary");
+		padding          : 0.5rem;
+		z-index          : 99;
+
+		.spTableControls-Button
+		{
+			display         : flex;
+			flex-direction  : row;
+			flex-wrap       : nowrap;
+			height          : 1.5rem;
+			flex-grow       : 1;
+			align-items     : center;
+			align-self      : center;
+			height          : 2rem;
+			flex-basis      : 32%;
+			justify-content : flex-end;
+
+			i
+			{
+				font-size : 1.1rem;
+				margin    : 0rem 0.5rem;
+				cursor    : pointer;
+			}
+
+			i:hover
+			{
+				color : theme-color("secondary-light");
+			}
+
+			.smallerIcon
+			{
+				font-size : 1rem;
+			}
+
+			.selectedIcon
+			{
+				color : theme-color("secondary-light");
+			}
+
+			.filterApplied
+			{
+				color     : theme-color("secondary-light");
+				display   : inline-block;
+				animation : pulse 1s infinite linear;
+					-moz-animation    : pulse 1s infinite linear;
+					-o-animation      : pulse 1s infinite linear;
+					-webkit-animation : pulse 1s infinite linear;
+			}
+
+			@-webkit-keyframes pulse
+			{
+				0% { opacity: 1; }
+				50% { opacity: 0; }
+				100% { opacity: 1; }
+			}
+
+			@-moz-keyframes pulse
+			{
+				0% { opacity: 1; }
+				50% { opacity: 0; }
+				100% { opacity: 1; }
+			}
+
+			@-o-keyframes pulse
+			{
+				0% { opacity: 1; }
+				50% { opacity: 0; }
+				100% { opacity: 1; }
+			}
+
+			@-ms-keyframes pulse
+			{
+				0% { opacity: 1; }
+				50% { opacity: 0; }
+				100% { opacity: 1; }
+			}
+
+			@keyframes pulse
+			{
+				0% { opacity: 1; }
+				50% { opacity: 0; }
+				100% { opacity: 1; }
+			}
+		}
+
+		.spTableControls-Title
+		{
+			display         : flex;
+			flex-grow       : 1;
+			justify-content : center;
+			align-content   : center;
+			align-items     : center;
+			font-weight     : 400;
+			align-self      : center;
+			height          : 2rem;
+			flex-basis      : 32%;
+			font-size       : 0.9rem;
+		}
+
+		.spTableControls-Search
+		{
+			display        : flex;
+			flex-grow      : 1;
+			position       : relative;
+			padding-left   : 0.5rem;
+			align-self     : center;
+			height         : 2rem;
+			align-items    : center;
+			flex-basis     : 32%;
+			pointer-events : none;
+
+			.spTableControls-SearchContainer
+			{
+				display      : flex;
+				position     : relative;
+				padding-left : 0.5rem;
+				height       : 2rem;
+				align-items  : center;
+			}
+
+			input, &:focus
+			{
+				outline          : none;
+				font-size        : 0.8rem;
+				color            : theme-color("primary-dark");
+				background-color : theme-color("primary-text");
+				background-clip  : border-box;
+				border           : 1px solid theme-color("primary-dark");
+				border-radius    : 0.15rem;
+				height           : 1.5rem;
+				width            : 10rem;
+				padding          : 0.05rem 0.3rem 0rem 1.5rem;
+				pointer-events   : all;
+			}
+
+			.findIcon
+			{
+				color     : theme-color("primary-dark");
+				position  : absolute;
+				font-size : 0.7rem;
+				top       : 0.7rem;
+				left      : 1rem;
+			}
+
+			.closeIcon
+			{
+				font-size       : 1rem;
+				flex-basis      : inherit;
+				justify-content : inherit;
+				pointer-events  : all;
+			}
+		}
+
+		@media only screen and (max-width: 576px), only screen and (max-device-width: 576px)
+		{
+			.spTableControls-Search
+			{
+				flex-basis : inherit;
+			}
+
+			.spTableControls-Title
+			{
+				display    : none;
+			}
+
+			.spTableControls-Button
+			{
+				flex-grow       : 1;
+				justify-content : flex-end;
+				flex-basis      : inherit;
+			}
+		}
+
+		@media only screen and (max-width: 390px), only screen and (max-device-width: 390px)
+		{
+			.spTableControls-Search
+			{
+				flex-grow       : 1;
+				justify-content : center;
+				flex-basis      : 100%;
+				padding-right   : 0.5rem;
+
+				input
+				{
+					width         : 100%;
+				}
+			}
+
+			.spTableControls-Title
+			{
+				display : none;
+			}
+
+			.spTableControls-Button
+			{
+				flex-grow       : 1;
+				justify-content : center;
+				flex-basis      : 100%;
+			}
+		}
+	}
+
+	.spTableDataArea
+	{
+		position          : relative;
+		background-image  : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAALElEQVQYV2NsmL0irSE1YhYDAwMDOpsRXRCZD5ZEFkDWzUjQWJw68dqJz1gAprk+g+lhXZsAAAAASUVORK5CYII=");
+		background-repeat : repeat;
+		height            : $tableHeight;
+
+		.spTableFilterPane
+		{
+			position         : absolute;
+			top              : 0;
+			right            : 0;
+			height           : 100%;
+			display          : flex;
+			flex-direction   : row;
+			background-color : theme-color("secondary");
+			overflow-y       : auto;
+			max-width        : 16rem;
+
+			.sTableFilterPaneBorder
+			{
+				width            : 0.3rem;
+				background-color : theme-color("secondary-light");
+				height           : 100%;
+			}
+
+			.sTableFilterPaneContent
+			{
+				display         : flex;
+				flex-direction  : column;
+				align-items     : center;
+				height          : 100%;
+				padding         : 0.5rem 0.5rem;
+				justify-content : space-between;
+				width           : 100%;
+
+				.spTableFilterPaneTitle
+				{
+					display        : flex;
+					flex-direction : column;
+					align-items    : center;
+					color          : theme-color("primary-text");
+					font-size      : 0.8rem;
+
+					i
+					{
+						padding-right : 0.3rem;
+						align-self    : center;
+						line-height   : 0.7rem;
+						font-size     : 0.7rem;
+					}
+
+					button
+					{
+					    padding : 0rem 0.5rem;
+					}
+				}
+
+				.spTableFilterPaneColumns
+				{
+					width : 100%;
+
+					.spTableFilterPaneColumnsItems
+					{
+						margin-top : 1rem;
+
+						&:first-child
+						{
+							margin-top : 0rem;
+						}
+
+						.spTableFilterPaneColumnsItem
+						{
+							font-size        : 0.8rem;
+							height           : 1.3rem;
+							background-color : #EEEEEE;
+							color            : #000000;
+							position         : relative;
+							padding          : 0rem 0.5rem;
+							width            : auto;
+							overflow         : hidden;
+							border-width     : 0;
+							outline          : none;
+							border-radius    : 2px;
+							box-shadow       : 0 1px 4px rgba(0, 0, 0, 0.6);
+							display          : flex;
+							align-items      : center;
+							justify-content  : flex-start;
+							cursor           : pointer;
+							z-index          : 99;
+
+							span
+							{
+								width       : 100%;
+								line-height : 0.8rem;
+							}
+
+							&:after
+							{
+								font-family  : 'Font Awesome 5 Free';
+								content      : "\f13a";
+								font-weight  : 900;
+								padding-left : 0.3rem;
+								align-self   : center;
+							}
+
+							&:hover
+							{
+								background-color : #BCBCBC;
+							}
+
+							&:focus
+							{
+								background-color : #EEEEEE;
+							}
+
+							&:focus:hover
+							{
+								background-color : #BCBCBC;
+							}
+
+							&:before
+							{
+								content          : "";
+								position         : absolute;
+								top              : 50%;
+								left             : 50%;
+								display          : block;
+								width            : 0;
+								padding-top      : 0;
+								border-radius    : 100%;
+								background-color : rgba(236, 240, 241, .3);
+								transform        : translate(-50%, -50%);
+									-webkit-transform : translate(-50%, -50%);
+									-moz-transform    : translate(-50%, -50%);
+									-ms-transform     : translate(-50%, -50%);
+									-o-transform      : translate(-50%, -50%);
+							}
+
+							&:active:before
+							{
+								width       : 120%;
+								padding-top : 120%;
+
+								transition: width .2s ease-out, padding-top .2s ease-out;
+									-webkit-transition : width .2s ease-out, padding-top .2s ease-out;
+									-moz-transition    : width .2s ease-out, padding-top .2s ease-out;
+									-ms-transition     : width .2s ease-out, padding-top .2s ease-out;
+									-o-transition      : width .2s ease-out, padding-top .2s ease-out;
+							}
+						}
+
+						.spTableFilterPaneOptions
+						{
+							display          : flex;
+							flex-direction   : column;
+							font-size        : 0.8rem;
+							background-color : #eeeeee;
+							color            : black;
+							position         : relative;
+							width            : auto;
+							overflow-x       : hidden;
+							overflow-y       : auto;
+							border-width     : 0px;
+							outline          : none;
+							border-radius    : 2px;
+							box-shadow       : rgba(0, 0, 0, 0.6) 0px 1px 0px;
+							align-items      : center;
+							justify-content  : flex-start;
+							margin-top       : 0.1rem;
+							max-height       : 13.2rem;
+							white-space      : nowrap;
+							z-index          : 1;
+
+							span
+							{
+								width         : 100%;
+								padding       : 0.3rem 0.3rem;
+								cursor        : pointer;
+								white-space   : nowrap;
+								overflow      : hidden;
+								text-overflow : ellipsis;
+								padding-right : 1.5rem;
+								flex          : 0 0 auto;
+
+								&:hover
+								{
+									background-color : #BCBCBC;
+								}
+
+								&:focus
+								{
+									background-color : #EEEEEE;
+								}
+
+								&:focus:hover
+								{
+									background-color : #BCBCBC;
+								}
+							}
+
+							.spTableFilterPaneOptionsChecked
+							{
+								&:after
+								{
+									font-family  : 'Font Awesome 5 Free';
+									content      : "\f14a";
+									font-weight  : 900;
+									padding-left : 0.3rem;
+									position     : absolute;
+									right        : 0.5rem;
+									color        : theme-color("secondary-dark");
+								}
+							}
+
+							.spTableFilterPaneOptionsUnchecked
+							{
+								&:after
+								{
+									font-family  : 'Font Awesome 5 Free';
+									content      : "\f0c8";
+									padding-left : 0.3rem;
+									padding-top  : 0.05rem;
+									position     : absolute;
+									right        : 0.5rem;
+								}
+							}
+						}
+					}
+
+					.spTableFilterPaneNone
+					{
+						display        : flex;
+						flex-direction : column;
+						align-items    : center;
+						color          : theme-color("secondary-text");
+						font-size      : 0.9rem;
+					}
+				}
+
+				.spTableFilterPaneClose
+				{
+					cursor     : pointer;
+					position   : relative;
+					margin     : 0.5rem;
+					font-size  : 2rem;
+					color      : theme-color("secondary-light");
+					transition : color .3s;
+						-webkit-transition : color .3s;
+						-moz-transition    : color .3s;
+						-ms-transition     : color .3s;
+						-o-transition      : color .3s;
+
+					&:hover
+					{
+						color : theme-color("secondary-dark");
+					}
+
+					&:focus
+					{
+						color : theme-color("secondary-light");
+					}
+
+					&:before
+					{
+						content          : "";
+						 position        : absolute;
+						top              : 50%;
+						 left            : 50%;
+						display          : block;
+						width            : 0;
+						padding-top      : 0;
+						border-radius    : 100%;
+						background-color : rgba(236, 240, 241, .3);
+						transform        : translate(-50%, -50%);
+							-webkit-transform : translate(-50%, -50%);
+							-moz-transform    : translate(-50%, -50%);
+							-ms-transform     : translate(-50%, -50%);
+							-o-transform      : translate(-50%, -50%);
+					}
+
+					&:active:before
+					{
+						width       : 105%;
+						padding-top : 105%;
+
+						transition: width .2s ease-out, padding-top .2s ease-out;
+							-webkit-transition : width .2s ease-out, padding-top .2s ease-out;
+							-moz-transition    : width .2s ease-out, padding-top .2s ease-out;
+							-ms-transition     : width .2s ease-out, padding-top .2s ease-out;
+							-o-transition      : width .2s ease-out, padding-top .2s ease-out;
+					}
+				}
+			}
+		}
+	}
+
+	.spTableContent
+	{
+		width            : 100%;
+		max-width        : 100%;
+		color            : theme-color("primary-dark");
+		background-color : $tableDataBackgroundColour;
+		overflow         : hidden;
+
+		table
+		{
+			display          : table;
+			background-color : theme-color("primary-text");
+			width            : 100%;
+			max-width        : 100%;
+			border-spacing   : 2px;
+			border-collapse  : separate;
+		}
+
+		thead, tbody, tfoot
+		{
+			display : block;
+
+			tr
+			{
+				display      : table;
+				height       : $tableRowHeight;
+				width        : 100%;
+				table-layout : fixed;
+				transition   : all 0.3s ease;
+					-webkit-transition : all 0.3s ease;
+					-o-transition      : all 0.3s ease;
+
+				th, td
+				{
+					font-size      : $tableFontSize;
+					text-align     : left;
+					padding        : $tableCellPadding;
+					vertical-align : middle;
+					border-top     : 0;
+					word-break     : break-word;
+					transition     : all 0.3s ease;
+						-webkit-transition : all 0.3s ease;
+						-o-transition      : all 0.3s ease;
+				}
+
+				.noTableData
+				{
+					text-align     : center;
+					height         : 5rem;
+					vertical-align : middle;
+				}
+			}
+		}
+
+		thead
+		{
+			tr
+			{
+				th
+				{
+					font-weight    : 500;
+					vertical-align : middle;
+					border-bottom  : 1px solid rgba(0,0,0,.12);
+					cursor         : pointer;
+					white-space    : nowrap;
+				}
+
+				th.notSorted:after
+				{
+					font-family  : 'Font Awesome 5 Free';
+					content      : "\f0dd";
+					font-weight  : 900;
+					padding-left : 0.3rem;
+					visibility   : hidden;
+				}
+
+				th.notSorted:hover:after
+				{
+					visibility : visible !important;
+				}
+
+				th.ascending:after
+				{
+					font-family  : 'Font Awesome 5 Free';
+					content      : "\f0de";
+					font-weight  : 900;
+					padding-left : 0.3rem;
+				}
+
+				th.decending:after
+				{
+					font-family  : 'Font Awesome 5 Free';
+					content      : "\f0dd";
+					font-weight  : 900;
+					padding-left : 0.3rem;
+				}
+			}
+		}
+
+		caption + thead, colgroup + thead, thead:first-child
+		{
+			tr:first-child
+			{
+				th, td
+				{
+					border-top : 0;
+				}
+			}
+		}
+
+		tbody + tbody
+		{
+			border-top: 1px solid rgba(0,0,0,.12);
+		}
+
+		tbody
+		{
+			overflow-y : auto;
+			overflow-x : hidden;
+			max-height : $tableBodyHeight;
+
+			tr:hover
+			{
+				td, th
+				{
+					background-color : theme-color("secondary");
+					color            : theme-color("primary-text");
+					cursor           : pointer;
+				}
+			}
+		}
+
+		.tableLoading
+		{
+			display         : flex;
+			align-items     : center;
+			justify-content : center;
+			height          : 100%;
+		}
+
+		@media screen and (max-width : 768px)
+		{
+			table
+			{
+				background-color : transparent;
+			}
+
+			thead, tfoot
+			{
+				display : none;
+			}
+
+			tbody
+			{
+				height      : $tableHeight;
+				max-height  : $tableHeight;
+				display     : block;
+
+				tr:hover
+				{
+					td
+					{
+						background-color : theme-color("primary-text");
+						color            : inherit;
+					}
+				}
+
+				tr
+				{
+					display       : block;
+					border        : 1px solid $tableSmallBorderColur;
+					border-radius : 2px;
+					margin        : 0.5rem 0rem;
+					height        : auto;
+
+					td
+					{
+						background-color : theme-color("primary-text");
+						display          : block;
+						vertical-align   : middle;
+						text-align       : right;
+						white-space      : nowrap;
+						overflow         : hidden;
+						text-overflow    : ellipsis;
+						padding          : 1rem;
+					}
+
+					td[data-title]:before
+					{
+						content     : attr(data-title);
+						float       : left;
+						font-size   : inherit;
+						font-weight : 500;
+					}
+
+					&:hover
+					{
+						cursor : pointer;
+
+						td
+						{
+							background-color : theme-color("secondary");
+							color            : theme-color("primary-text");
+						}
+					}
+
+					.noTableData
+					{
+						display         : flex;
+						align-items     : center;
+						justify-content : center;
+					}
+				}
+			}
+		}
+	}
+
+	.spTableFooter
+	{
+		display          : flex;
+		flex-direction   : row;
+		color            : theme-color("primary-text");
+		align-self       : center;
+		align-items      : center;
+		width            : 100%;
+		background-color : theme-color("primary-dark");
+		padding          : 0.5rem;
+		font-size        : 0.9rem;
+		flex-wrap        : wrap;
+
+		.spTableFooter-RowQuantity
+		{
+			display         : flex;
+			flex-grow       : 1;
+			align-self      : center;
+			align-items     : center;
+			justify-content : flex-start;
+			padding-left    : 0.5rem;
+			flex-basis      : 32%;
+
+			.spTableFooter-RowQuantity-Select
+			{
+				margin           : 0rem 0.5rem;
+				outline          : none;
+				font-size        : 0.8rem;
+				color            : theme-color("primary-dark");
+				background-color : theme-color("primary-text");
+				background-clip  : border-box;
+				border           : 1px solid theme-color("primary-dark");
+				border-radius    : 0.15rem;
+				display          : flex;
+				align-items      : center;
+			}
+		}
+
+		.spTableFooter-SearchFound
+		{
+			display         : flex;
+			flex-grow       : 1;
+			justify-content : center;
+			align-self      : center;
+			align-items     : center;
+			flex-basis      : 32%;
+		}
+
+		.spTableFooter-Pager
+		{
+			align-self      : center;
+			display         : flex;
+			flex-grow       : 1;
+			justify-content : flex-end;
+			padding-right   : 0.4rem;
+			align-items     : center;
+			flex-basis      : 32%;
+
+			span
+			{
+				padding : 0rem 0.5rem;
+			}
+
+			i
+			{
+				font-size : 1rem;
+				cursor    : pointer;
+			}
+
+			i:hover
+			{
+				color : theme-color("secondary-light");
+			}
+		}
+
+		@media only screen and (max-width: 770px), only screen and (max-device-width: 770px)
+		{
+			.spTableFooter-RowQuantity
+			{
+				flex-grow       : 0;
+			}
+
+			.spTableFooter-SearchFound
+			{
+				display : none;
+			}
+
+			.spTableFooter-Pager
+			{
+				flex-grow       : 1;
+				justify-content : flex-end;
+			}
+		}
+
+		@media only screen and (max-width: 440px), only screen and (max-device-width: 440px)
+		{
+			.spTableFooter-RowQuantity
+			{
+				flex-grow       : 1;
+				justify-content : center;
+				flex-basis      : 100%;
+			}
+
+			.spTableFooter-SearchFound
+			{
+				display : none;
+			}
+
+			.spTableFooter-Pager
+			{
+				flex-grow       : 1;
+				justify-content : center;
+				flex-basis      : 100%;
+				padding-top     : 0.5rem;
+
+				i
+				{
+					display    : flex;
+					align-self : center;
+				}
+			}
+		}
+	}
+}
+
+@media print
+{
+	.spForm
+	{
+		background      : #FFF;
+		color           : #000;
+	}
+
+	.spTableContainer
+	{
+		height           : auto !important;
+		max-height       : none !important;
+		min-height       : none !important;
+		background-color : #FFF;
+
+		.spTableContent
+		{
+			height           : auto !important;
+			max-height       : none !important;
+			min-height       : none !important;
+			background-color : #FFF;
+
+			table
+			{
+				height           : auto !important;
+				max-height       : none !important;
+				min-height       : none !important;
+				background-color : #FFF;
+
+				tbody
+				{
+					height     : auto !important;
+					max-height : none !important;
+					min-height : none !important;
+
+					th,tr
+					{
+						height     : auto !important;
+						max-height : none !important;
+						min-height : none !important;
+					}
+				}
+			}
+		}
+	}
+}

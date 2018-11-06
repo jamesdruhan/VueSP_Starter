@@ -1,0 +1,10 @@
+## various other file types we don't want to have in the repository:
+.DS_Store
+*~
+*#
+*.licensed
+*.aux
+*_trace
+
+## Node modules.
+node_modules/

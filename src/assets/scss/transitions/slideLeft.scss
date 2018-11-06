@@ -1,0 +1,78 @@
+.transitionSlideLeft-enter-active
+{
+	transition : all .3s ease;
+		-webkit-transition : all .3s ease;
+		-moz-transition    : all .3s ease;
+		-ms-transition     : all .3s ease;
+		-o-transition      : all .3s ease;
+}
+
+.transitionSlideLeft-leave-active
+{
+	transition : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-webkit-transition : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-moz-transition    : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-ms-transition     : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-o-transition      : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.transitionSlideLeft-enter
+{
+	transform : translateX(20px);
+		-webkit-transform : translateX(20px);
+		-moz-transform    : translateX(20px);
+		-ms-transform     : translateX(20px);
+		-o-transform      : translateX(20px);
+		opacity   : 0;
+}
+
+.transitionSlideLeft-leave-to
+{
+	transform : translateX(-20px);
+		-webkit-transform : translateX(-20px);
+		-moz-transform    : translateX(-20px);
+		-ms-transform     : translateX(-20px);
+		-o-transform      : translateX(-20px);
+		opacity   : 0;
+}
+
+
+
+
+.transitionSlideLeftThenRight-enter-active
+{
+	transition : all .3s ease;
+		-webkit-transition : all .3s ease;
+		-moz-transition    : all .3s ease;
+		-ms-transition     : all .3s ease;
+		-o-transition      : all .3s ease;
+}
+
+.transitionSlideLeftThenRight-leave-active
+{
+	transition : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-webkit-transition : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-moz-transition    : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-ms-transition     : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+		-o-transition      : all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.transitionSlideLeftThenRight-enter
+{
+	transform : translateX(200px);
+		-webkit-transform : translateX(200px);
+		-moz-transform    : translateX(200px);
+		-ms-transform     : translateX(200px);
+		-o-transform      : translateX(200px);
+		opacity   : 0;
+}
+
+.transitionSlideLeftThenRight-leave-to
+{
+	transform : translateX(200px);
+		-webkit-transform : translateX(200px);
+		-moz-transform    : translateX(200px);
+		-ms-transform     : translateX(200px);
+		-o-transform      : translateX(200px);
+		opacity   : 0;
+}

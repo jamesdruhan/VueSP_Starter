@@ -1,0 +1,112 @@
+.spMessenger-Modal
+{
+    position         : fixed;
+    z-index          : 9998;
+    top              : 0;
+    left             : 0;
+    width            : 100%;
+    height           : 100%;
+    overflow         : auto;
+    background-color : rgba(0,0,0,0.4);
+
+    transition       : opacity .3s ease;
+        -webkit-transition : opacity .3s ease;
+        -moz-transition    : opacity .3s ease;
+        -ms-transition     : opacity .3s ease;
+        -o-transition      : opacity .3s ease;
+
+    .spMessenger-Container
+    {
+		background-size : 25px 25px;
+        width           : 30rem; // Default
+        max-width       : 90%;
+        position        : absolute;
+        top             : 50%;
+        left            : 50%;
+
+        transform       : translate(-50%, -50%);
+            -webkit-transform  : translate(-50%, -50%);
+            -moz-transform     : translate(-50%, -50%);
+            -ms-transform      : translate(-50%, -50%);
+            -o-transform       : translate(-50%, -50%);
+
+        box-shadow      : 3px 3px 20px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow : 3px 3px 20px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow    : 3px 3px 20px rgba(0, 0, 0, 0.5);
+            -ms-shadow         : 3px 3px 20px rgba(0, 0, 0, 0.5);
+            -o-shadow          : 3px 3px 20px rgba(0, 0, 0, 0.5);
+
+        .spMessenger-Header
+        {
+            height : 1rem;
+            background-color : theme-color("primary-dark");
+        }
+
+        .spMessenger-Title
+        {
+            background-color : theme-color("primary");
+            color            : #FFF;
+            height           : 3rem;
+            position         : relative;
+            display          : flex;
+            align-items      : center;
+
+            .spMessenger-Title-Icon
+            {
+                display          : flex;
+                align-items      : center;
+                font-size        : 2rem;
+                justify-content  : center;
+                height           : 4rem;
+                width            : 4rem;
+                position         : absolute;
+                top              : -0.5rem;
+                left             : 1rem;
+                background-color : theme-color("secondary");
+
+                // animation        : pulse 2s linear infinite;
+                //     -webkit-box-shadow : pulse 2s linear infinite;
+                //     -moz-box-shadow    : pulse 2s linear infinite;
+                //     -ms-box-shadow     : pulse 2s linear infinite;
+                //     -o-box-shadow      : pulse 2s linear infinite;
+
+                box-shadow       : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    -webkit-box-shadow : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    -moz-box-shadow    : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    -ms-box-shadow     : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    -o-box-shadow      : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            }
+
+            span
+            {
+                font-size     : 1.5rem;
+                white-space   : nowrap;
+                overflow      : hidden;
+                text-overflow : ellipsis;
+                padding       : 0.5rem 0.5rem 0.5rem 6rem;
+            }
+        }
+
+        .spMessenger-Body
+        {
+            background-color : #F5F5F6;
+            padding          : 2rem 1.5rem;
+            font-size        : 0.9rem;
+            text-align       : center;
+        }
+
+        .spMessenger-Controls
+        {
+            background-color : #E1E2E1;
+            display          : flex;
+            align-items      : center;
+            justify-content  : space-around;
+        }
+
+        .spMessenger-Footer
+        {
+            height           : 0.5rem;
+            background-color : theme-color("primary-dark");
+        }
+    }
+}
