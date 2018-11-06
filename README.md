@@ -1,20 +1,20 @@
 # VueSP Starter
 
-VueSP Starter is a scaffolded VueJS application for rapid SharePoint app/webpark development. This package contains everything you need to get started to work with VueJS on the SharePoint platform. VueSP Starter can be used for something as small as a custom view/new/edit form for a SharePoint list to a full fledge SharePoint hosted add-in application.
+VueSP Starter is a scaffolding VueJS application for rapid SharePoint app/webpart development. This package contains everything you need to get started to work with VueJS on the SharePoint platform. VueSP Starter can be used for something as small as a custom view/new/edit form for a SharePoint list to a full fledge SharePoint hosted add-in application.
 
-<a href="src/help/getting_started.md">Getting Started Guide</a>
+#### Jump Right In
+- <a href="src/help/getting_started.md">Getting Started Guide</a>
 
----
-
-# VueSP Starter - Indepth
+#### VueSP Starter - Indepth
 1. [Template Composition](#template_composition)
 2. [Directory Structure](#directory_structure)
 3. [Files](#files)
 4. [Getting Started](#getting_started)
 
+<br>
 ---
-
-## <a id="template_composition"></a>Template Composition
+<br>
+### <a id="template_composition"></a>Template Composition
 
 The VueSP Starter is basically just the shell of a VueJS application. It gets your started by creating and organizing the VueJS structure so you don't have to. To accomplish this, a number of development tools, listed below.
 
@@ -76,9 +76,10 @@ VueSP Starter is developed with ES6 code, this means that it's only compatible w
 
 Babel is a NodeJS application that manages that conversion process for you.
 
+<br>
 ---
-
-## <a id="directory_structure"></a>Directory Structure
+<br>
+### <a id="directory_structure"></a>Directory Structure
 The basic directory structure of the VueSP package looks like this:
 
 ```text
@@ -114,9 +115,10 @@ The basic directory structure of the VueSP package looks like this:
 	- /src/**store**/: Stores your Vuex store scripts.
 		- /src/store/**moduels**/: Stores the Vuex store modules.
 
+<br>
 ---
-
-## <a id="files"></a>Files
+<br>
+### <a id="files"></a>Files
 VueSP Starter is made up of a number of files. Belong is a description of each.
 
 - /**.babelrc**: Stores the configuration details for how the Babel transpiler should work.
@@ -131,6 +133,9 @@ VueSP Starter is made up of a number of files. Belong is a description of each.
 - /src/mixins/**.js**: The various mixin files are multi-use Vue functionality included with the Vue application.
 - /src/store/**index.js**: The main Vuex store file. This imports and registers all the various store modules.
 
-## <a id="getting_started"></a>Getting Started
+<br>
+---
+<br>
+### <a id="getting_started"></a>Getting Started
 
 Check out the dedicated <a href="src/help/getting_started.md">Getting Started Guide</a> to all the details needed to learn and use the variables features of VueSP Starter.

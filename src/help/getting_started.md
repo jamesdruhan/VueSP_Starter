@@ -1,6 +1,7 @@
 # VueSP Starter - Getting Started
 
 - [Installation](#installation)
+- [Usage](#usage)
 - [Vue Router](#vue_router)
 - [Vuex](#vuex)
 - [Event Hub](#event_hub)
@@ -21,6 +22,84 @@ Install all required NodeJS modules:
 
 	npm install
 ```
+
+## <a id="usage"></a>Usage
+There are two ways to use Vue and VueSP Starter with SharePoint.
+
+### App (Add-In)
+In addition to your normal script includes for a SharePoint App (Add-In) you will also include the bundle file and create a div element for the Vue instance.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Device Agreement</title>
+
+      <link rel="icon" type="image/png" href="favicon.png?v=3">
+
+      <!-- START: META -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!--  END: META  -->
+
+      <!-- START: SHAREPOINT JS -->
+      <script type="text/javascript" src="http://sharepoint.domain.com/site/mySiteName/_layouts/15/init.js"></script>
+      <script type="text/javascript" src="http://sharepoint.domain.com/site/mySiteName/_layouts/15/MicrosoftAjax.js"></script>
+      <script type="text/javascript" src="http://sharepoint.domain.com/site/mySiteName/_layouts/15/SP.Runtime.js"></script>
+      <script type="text/javascript" src="http://sharepoint.domain.com/site/mySiteName/_layouts/15/SP.core.js"></script>
+      <script type="text/javascript" src="http://sharepoint.domain.com/site/mySiteName/_layouts/15/SP.js"></script>
+      <script type="text/javascript" src="http://sharepoint.domain.com/site/mySiteName/_layouts/15/SP.RequestExecutor.js"></script>
+      <!--  END: SHAREPOINT JS  -->
+  </head>
+  <body>
+      <!-- START: APPLICATION TEMPLATE -->
+      <div id="vueApplication"></div>
+      <!--  END: APPLICATION TEMPLATE  -->
+
+      <!-- START: APPLICATION JS -->
+      <script type="text/javascript" src="dist/appBundle.js"></script>
+      <!--  END: APPLICATION JS  -->
+  </body>
+</html>
+
+```
+
+### Content Editor
+
+When using a content editor it is recommended to store your editor code in a file, rather than writing it directly into the editor box. This is because SharePoint formats and strips your code according to its standards. It does not do this when running from a file.
+
+As such, create an initialization script with the following code and store it in a document/asset library. Be sure to update the paths in the code below. This code will force load the MicrosoftAjax.js script which must be loaded before your app along with the script bundle for your application.
+
+**appInit.js**
+
+```html
+<script type="text/javascript" src="http://sharepoint.domain.com/site/mySiteName/_layouts/15/MicrosoftAjax.js"></script>
+
+<div id="vueApplication"></div>
+
+<script>
+	// This function will add the vue application script the HTML's pages JavaScript's.
+	function initVue ()
+	{
+		// Create a empty script tag element.
+		var scriptTag = document.createElement('script');
+
+		// Assign the source for the new script tag to the vue application.
+		scriptTag.src = '/site/mySiteName/myLibraryName/appBundle.js';
+
+		// Get the current loaded first script element.
+		firstScriptTag = document.getElementsByTagName('script')[0];
+
+		// Insert your new script before the current first.
+		firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag);
+	}
+
+	// Run the initVue function immediately after the sp.js has be loaded.
+	SP.SOD.executeFunc('sp.js', 'SP.ClientContext', initVue);
+</script>
+```
+
+All that is left to do is to upload your appBundle.js to the library noted in the above script.
 
 ## <a id="vue_router"></a>Vue Router
 
@@ -56,8 +135,6 @@ Vue Router is available to use in VueSP Starter and allows you to create SPA (Si
 	<!-- END   : Router -->
 ```
 
----
-
 ## <a id="vuex"></a>Vuex
 
 Vuex is a state management add-on for Vue. This allows you to have one or more "Stores" which are logical containers that store variables. VueSP Starter deploys multiple global stores which can be accessed by any component. You may also create your own store for custom application content.
@@ -77,11 +154,9 @@ Vuex should not be disabled in VueSP Starter as it is integrated into nearly all
 
 	Add custom stores to the /store/modules/ folder then register them in this file.
 
----
-
 ## <a id="event_hub"></a>Event Hub
 
-VueSP Starter intializes a secondary Vue instance which acts as an event hub for your application. This allows any component to broadcast a event to any other component via the event hub Vue instance.
+VueSP Starter initializes a secondary Vue instance which acts as an event hub for your application. This allows any component to broadcast an event to any other component via the event hub Vue instance.
 
 **Default**: Enabled
 
@@ -108,8 +183,6 @@ VueSP Starter intializes a secondary Vue instance which acts as an event hub for
 	this.$eventHub.$emit( 'myEventName', 'Hello World' );
 ```
 
----
-
 ## <a id="mixins"></a>Mixins
 
 Mixins are reusable component code which is combined with your component. A mixin may have all the same properties as a component: data, methods, components, watches, etc. This makes it perfect for those repeatable items used by multiple components. In addition, you may override mixin properties and Vue will ignore the mixin property in favor for your components.
@@ -123,8 +196,6 @@ Mixins are reusable component code which is combined with your component. A mixi
 - <a href="./stores/spUser.md">spUser</a>
 
 **Default**: By default, the App.vue (primary component) utilizes the App mixin (appMix). This mixin utilizes spUI, spUser and spList mixins to perform specific tasks when the application is loaded. Review each of the mixin details to see what features are offered.
-
----
 
 ## <a id="components"></a>Components
 
