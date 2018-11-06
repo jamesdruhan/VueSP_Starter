@@ -2,11 +2,12 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Vue Router](#vue_router)
+- [Vue Router](#router)
 - [Vuex](#vuex)
-- [Event Hub](#event_hub)
+- [Event Hub](#event)
 - [Mixins](#mixins)
 - [Components](#components)
+
 
 ## <a id="installation"></a>Installation
 
@@ -26,7 +27,7 @@ Install all required NodeJS modules:
 ## <a id="usage"></a>Usage
 There are two ways to use Vue and VueSP Starter with SharePoint.
 
-### App (Add-In)
+##### App (Add-In)
 In addition to your normal script includes for a SharePoint App (Add-In) you will also include the bundle file and create a div element for the Vue instance.
 
 ```html
@@ -64,7 +65,7 @@ In addition to your normal script includes for a SharePoint App (Add-In) you wil
 
 ```
 
-### Content Editor
+##### Content Editor
 
 When using a content editor it is recommended to store your editor code in a file, rather than writing it directly into the editor box. This is because SharePoint formats and strips your code according to its standards. It does not do this when running from a file.
 
@@ -101,7 +102,7 @@ As such, create an initialization script with the following code and store it in
 
 All that is left to do is to upload your appBundle.js to the library noted in the above script.
 
-## <a id="vue_router"></a>Vue Router
+## <a id="router"></a>Vue Router
 
 Vue Router is available to use in VueSP Starter and allows you to create SPA (Single Page Applications). More information about Vue Router can be found here: https://router.vuejs.org/.
 
@@ -154,7 +155,7 @@ Vuex should not be disabled in VueSP Starter as it is integrated into nearly all
 
 	Add custom stores to the /store/modules/ folder then register them in this file.
 
-## <a id="event_hub"></a>Event Hub
+## <a id="event"></a>Event Hub
 
 VueSP Starter initializes a secondary Vue instance which acts as an event hub for your application. This allows any component to broadcast an event to any other component via the event hub Vue instance.
 

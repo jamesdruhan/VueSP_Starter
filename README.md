@@ -6,15 +6,15 @@ VueSP Starter is a scaffolding VueJS application for rapid SharePoint app/webpar
 - <a href="src/help/getting_started.md">Getting Started Guide</a>
 
 #### VueSP Starter - Indepth
-1. [Template Composition](#template_composition)
-2. [Directory Structure](#directory_structure)
+1. [Template Composition](#template)
+2. [Directory Structure](#directory)
 3. [Files](#files)
-4. [Getting Started](#getting_started)
+4. [Getting Started](#started)
 
 <br>
 ---
 <br>
-### <a id="template_composition"></a>Template Composition
+### <a id="template"></a>Template Composition
 
 The VueSP Starter is basically just the shell of a VueJS application. It gets your started by creating and organizing the VueJS structure so you don't have to. To accomplish this, a number of development tools, listed below.
 
@@ -79,7 +79,7 @@ Babel is a NodeJS application that manages that conversion process for you.
 <br>
 ---
 <br>
-### <a id="directory_structure"></a>Directory Structure
+### <a id="directory"></a>Directory Structure
 The basic directory structure of the VueSP package looks like this:
 
 ```text
@@ -136,6 +136,6 @@ VueSP Starter is made up of a number of files. Belong is a description of each.
 <br>
 ---
 <br>
-### <a id="getting_started"></a>Getting Started
+### <a id="started"></a>Getting Started
 
 Check out the dedicated <a href="src/help/getting_started.md">Getting Started Guide</a> to all the details needed to learn and use the variables features of VueSP Starter.
