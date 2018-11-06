@@ -1,51 +1,55 @@
 # VueSP Starter
 
-VueSP Starter is a scaffolding VueJS application for rapid SharePoint app/webpart development. This package contains everything you need to get started to work with VueJS on the SharePoint platform. VueSP Starter can be used for something as small as a custom view/new/edit form for a SharePoint list to a full fledge SharePoint hosted add-in application.
+VueSP Starter is a VueJS scaffolding for rapid SharePoint app/add-in/webpart development. This package contains everything you need to get started to work with VueJS on the SharePoint platform. Whether you need to make a custom form within an existing SharePoint site or an entire custom JavaScript SharePoint App (Add-In), VueSP Starter is here to get your ramped up quickly.
 
-#### Jump Right In
-- <a href="src/help/getting_started.md">Getting Started Guide</a>
+Jump right in with the **<a href="src/help/getting_started.md">Getting Started Guide</a>**.
 
-#### VueSP Starter - Indepth
-1. [Template Composition](#template)
+For beginners check out the **Scaffold Details** sections to learn more about the basics.
+
+## Features
+- VueJS Framework (<a href="https://vuejs.org/">Vue</a>)
+- Routing (<a href="https://router.vuejs.org/">Vue Router</a>)
+- State Management (<a href="https://vuex.vuejs.org/">Vuex</a>)
+- spHelper (<a href="https://www.npmjs.com/package/sphelper">NPM</a>)
+- Components
+	- Loader
+	- List
+	- Message (Modal)
+	- Form
+- Component Theming
+- Mixins
+- Event Hub
+
+## Scaffold Details
+1. [Scaffold Composition](#scaffold)
 2. [Directory Structure](#directory)
 3. [Files](#files)
 4. [Getting Started](#started)
 
-<br>
----
-<br>
-### <a id="template"></a>Template Composition
+### <a id="scaffold"></a>Scaffold Composition
 
-The VueSP Starter is basically just the shell of a VueJS application. It gets your started by creating and organizing the VueJS structure so you don't have to. To accomplish this, a number of development tools, listed below.
+VueSP Starter is fundamentally just the shell of a VueJS application. It gets your started by creating and organizing a VueJS application so you don't have to. In addition, it includes a number of SharePoint specific features and components. This package is made possible with a number of development tools:
 
 - **[NodeJS](#nodejs)**: A JavaScript runtime which allows you to use NPM, webpack and more to make developing easier and faster.
-- **[NPM](#npm)**: **N**ode **P**ackage **M**anager is used to pull in NPM packages used in VueSP Starter.
+- **[NPM](#npm)**: Node Package Manager is used to pull in NPM packages used in VueSP Starter.
 - **[Webpack](#webpack)**: Compiles your VueJS components, CSS and JS down to a single JavaScript app file.
 - **[Babel](#babel)**: Transpiles your ES6 code down to ES5 code compatible with more browsers.
 
-#### <a id="nodejs"></a> NodeJS
+##### <a id="nodejs"></a> NodeJS
 
-NodeJS can be installed on most operating systems and allows you to execute Node commands, applications and scripts via the console. This is a common tool to use for developing in many languages. For VueSP Starter, we use NodeJS's commands to do the following:
+NodeJS can be installed on most operating systems and allows you to execute Node commands, applications and scripts via the console. This is a common tool to use for developing in many languages. For instance, **VueSP Starter** is a NPM package. NPM is a site/application which manages packages created by developers for all sorts of platforms and languages. The NPM application is built using NodeJS. Therefore we can use NodeJS to execute a NPM command that allows users to install **VueSP Starter**.
 
-- Add other JavaScript libraries to our application such as VueJS (via NPM).
-- Compile advanced ES6 JavaScript code to ES5 so it's compatible with more browsers (via Babel).
-- Compile Vue, CSS and JavaScript files into one single file (called a bundle) so we can load our application easier (via Webpack).
+In addition, NodeJS allows us to use other tools such as those explained below.
 
-#### <a id="npm"></a> NPM
+More Details: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>
 
-NPM (Node Package Manager) is a NodeJS application and allows you to include (install) other JavaScript libraries into your application. For example, if you are starting with a empty project and want to use VueJS you would add the following code to your index.html
+##### <a id="npm"></a> NPM
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+NPM (Node Package Manager) is a NodeJS application/site that stores and manages your application package to make it easier to install. In addition, since one NPM package can utilize and require other NPM packages, NPM helps manage all those connections and relationships for the user. **VueSP Starter** uses a number of NPM packages.
 
-<!-- Then ... -->
+More Details: <a href="https://www.npmjs.com/">https://www.npmjs.com/</a>
 
-<script src="myApplicationHere.js"></script>
-```
-
-However, what if you wanted to include the Vue library **into** your application? Well, using the NodeJS application "NPM" allows you to configure all the various scripts which your application will use. This way, when your application is combined using Webpack (a NodeJS application) everything is included into a single file allowing you to only have one include statement in your HTML files.
-
-#### <a id="webpack"></a> Webpack
+##### <a id="webpack"></a> Webpack
 
 Webpack is a NodeJS application which specializes in combining all of your application components into a single file. This includes, JavaScript files, Vue component files, CSS & SASS files and more into a single JavaScript file.
 
@@ -68,17 +72,16 @@ Into this:
 <script src="myBundle.js"></script>
 ```
 
-#### <a id="babel"></a> Babel
+More Details: <a href="https://webpack.js.org/">https://webpack.js.org/</a>
 
-Babel is used in VueSP Starter in order to manage the transpiling of your application from ES6 to ES5 code. ES6 is the latest JavaScript version which is only compatible with the newest browsers. ES6 gives JavaScript developers features and functions that are not compatible with old browsers.
+##### <a id="babel"></a> Babel
 
-VueSP Starter is developed with ES6 code, this means that it's only compatible with the newest browsers. However, if we convert (transpile) the ES6 code to ES5 code then it will be compatible with most browsers!
+VueSP Starter is coded in JavaScript using ES6 features. These ES6 features are not fully supported by all web browsers. As such, to ensure compatibility with as many browsers as possible we use a transpiler called **Babel** to convert the ES6 code to the ES5 version.
 
-Babel is a NodeJS application that manages that conversion process for you.
+More Details: <a href="https://babeljs.io/">https://babeljs.io/</a>
 
-<br>
 ---
-<br>
+
 ### <a id="directory"></a>Directory Structure
 The basic directory structure of the VueSP package looks like this:
 
@@ -104,7 +107,7 @@ The basic directory structure of the VueSP package looks like this:
 	- /dist/**css**/: Stores your uncompiled CSS assets.
 	- /dist/**img**/: Stores your uncompiled images assets.
 	- /dist/**js**/: Stores your uncompiled JavaScript assets.
-- /**src**/: This directory stores all your pre-compiled components.
+- /**src**/: This directory stores all your pre-compiled components. This is your working directory.
 	- /src/**help**/: Stores the help markdown files for VueSP Starter.
 	- /src/**assets**/: Stores your pre-compiled assets.
 		- /src/assets/**scss**/: Stores your SASS files used in your package.
@@ -115,14 +118,13 @@ The basic directory structure of the VueSP package looks like this:
 	- /src/**store**/: Stores your Vuex store scripts.
 		- /src/store/**moduels**/: Stores the Vuex store modules.
 
-<br>
 ---
-<br>
+
 ### <a id="files"></a>Files
-VueSP Starter is made up of a number of files. Belong is a description of each.
+VueSP Starter is made up of a number of files. Some of which you don't need to make any changes.
 
 - /**.babelrc**: Stores the configuration details for how the Babel transpiler should work.
-- /**package.json**: Stores the configuration details for what the NodeJS package includes.
+- /**package.json**: Stores the configuration details for what the NPM package includes.
 - /**webpack.config.js**: Stores the configuration details for how Webpack should combine components.
 - /**README.md**: This file.
 
@@ -131,11 +133,11 @@ VueSP Starter is made up of a number of files. Belong is a description of each.
 - /src/assets/scss/**custom.scss**: Where your custom stylings should be stored. This file is imported in index.scss.
 - /src/components/**App.vue**: The main VueJS component. This is the most parent Vue component for your application and where configure your VueSP Starter options.
 - /src/mixins/**.js**: The various mixin files are multi-use Vue functionality included with the Vue application.
+- /src/router/**index.js**: The main Vue Router file. This is where you register and configure your routes.
 - /src/store/**index.js**: The main Vuex store file. This imports and registers all the various store modules.
 
-<br>
 ---
-<br>
+
 ### <a id="started"></a>Getting Started
 
-Check out the dedicated <a href="src/help/getting_started.md">Getting Started Guide</a> to all the details needed to learn and use the variables features of VueSP Starter.
+Check out the dedicated <a href="src/help/getting_started.md">Getting Started Guide</a> for all the details needed to learn and use the various features of VueSP Starter.
