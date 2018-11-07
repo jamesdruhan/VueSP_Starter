@@ -44,8 +44,9 @@ import './assets/scss/index.scss';
 
 Vue.prototype.$spHelper = new spHelper
 ({
- 	  crossDomain : false,
- 	  targetSite  : ''
+	// Defaults to current site.
+	crossDomain : false,
+	targetSite  : ''
 });
 
 // ------------------------------

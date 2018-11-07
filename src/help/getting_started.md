@@ -2,6 +2,7 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [spHelper](#sphelper)
 - [Vue Router](#router)
 - [Vuex](#vuex)
 - [Event Hub](#event)
@@ -11,24 +12,30 @@
 
 ## <a id="installation"></a>Installation
 
-via NPM:
-```nodejs
-    npm install vue-sp-starter
+> If you do not already have GIT installed, visit <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>.
+
+1. Clone the repository:
+
+```shell
+	git clone git@brm-git.cci.canon.info:SharePoint/VueSP_Starter.git
 ```
 
-Install all required NodeJS modules:
+> If you do not already have NodeJS installed, visit <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>.
 
-```nodejs
-	cd vue-sp-starter
+2. Install the NPM packages:
 
-	npm install
+```shell
+	cd <cloned-directory>
+    npm install
 ```
+
+3. Configure **webpack.config.js** for path and public path output settings.
 
 ## <a id="usage"></a>Usage
-There are two ways to use Vue and VueSP Starter with SharePoint.
+There are two ways to use VueSP Starter with SharePoint.
 
 ##### App (Add-In)
-In addition to your normal script includes for a SharePoint App (Add-In) you will also include the bundle file and create a div element for the Vue instance.
+In addition to your normal script includes for a SharePoint App (Add-In), you will also include the bundle file and create a div element for the Vue instance.
 
 ```html
 <!DOCTYPE html>
@@ -62,14 +69,23 @@ In addition to your normal script includes for a SharePoint App (Add-In) you wil
       <!--  END: APPLICATION JS  -->
   </body>
 </html>
-
 ```
+
+Compile your VueSP Starter application using the following console command. This will output the bundled file to the /dist/ directory locally on your computer.
+
+```shell
+	npm run build
+```
+
+All that is left to do is to upload the bundle to your SharePoint site referenced above.
 
 ##### Content Editor
 
 When using a content editor it is recommended to store your editor code in a file, rather than writing it directly into the editor box. This is because SharePoint formats and strips your code according to its standards. It does not do this when running from a file.
 
 As such, create an initialization script with the following code and store it in a document/asset library. Be sure to update the paths in the code below. This code will force load the MicrosoftAjax.js script which must be loaded before your app along with the script bundle for your application.
+
+Create a content editor webpart on your SharePoint site then point it to the newly uploaded intialize script.
 
 **appInit.js**
 
@@ -100,7 +116,36 @@ As such, create an initialization script with the following code and store it in
 </script>
 ```
 
-All that is left to do is to upload your appBundle.js to the library noted in the above script.
+Compile your VueSP Starter application using the following console command. This will output the bundled file to the /dist/ directory locally on your computer.
+
+```shell
+	npm run build
+```
+
+All that is left to do is to upload the bundle to your SharePoint site referenced in the initialize script.
+
+## <a id="sphelper"></a>spHelper
+
+spHelper is a JavaScript library designed to make it easier to issue requests to SharePoint via JavaScript. It uses JSOM to communicate with a target site. By default, spHelper is configured for the site the script is running from. The spHelper object can be accessed from within VueSP Starter with the $spHelper global variable.
+
+**To Configure**:
+
+- File: /src/index.js
+
+```javascript
+// --------------------------
+// Global Object for spHelper
+// --------------------------
+
+Vue.prototype.$spHelper = new spHelper
+({
+      // Defaults to current site.
+ 	  crossDomain : false,
+ 	  targetSite  : ''
+});
+```
+
+If you want to issue requests to a different site change the above noted defaults accordingly.
 
 ## <a id="router"></a>Vue Router
 
@@ -186,7 +231,7 @@ VueSP Starter initializes a secondary Vue instance which acts as an event hub fo
 
 ## <a id="mixins"></a>Mixins
 
-Mixins are reusable component code which is combined with your component. A mixin may have all the same properties as a component: data, methods, components, watches, etc. This makes it perfect for those repeatable items used by multiple components. In addition, you may override mixin properties and Vue will ignore the mixin property in favor for your components.
+Mixins are reusable component code which is combined with your component. A mixin may have all the same properties as a component: data, methods, components, watches, etc. This makes it perfect for that repeatable code used by multiple components. In addition, you may override mixin properties and Vue will ignore the mixin property in favor for your components.
 
 **Available Mixins**:
 

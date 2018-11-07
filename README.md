@@ -30,26 +30,37 @@ For beginners check out the **Scaffold Details** sections to learn more about th
 
 VueSP Starter is fundamentally just the shell of a VueJS application. It gets your started by creating and organizing a VueJS application so you don't have to. In addition, it includes a number of SharePoint specific features and components. This package is made possible with a number of development tools:
 
-- **[NodeJS](#nodejs)**: A JavaScript runtime which allows you to use NPM, webpack and more to make developing easier and faster.
-- **[NPM](#npm)**: Node Package Manager is used to pull in NPM packages used in VueSP Starter.
-- **[Webpack](#webpack)**: Compiles your VueJS components, CSS and JS down to a single JavaScript app file.
-- **[Babel](#babel)**: Transpiles your ES6 code down to ES5 code compatible with more browsers.
+- **GIT / GitHub**: Versioning system and repository for storing projects.
+- **NodeJS**: A JavaScript runtime which allows you to use NPM, webpack and more to make developing easier and faster.
+- **NPM**: Node Package Manager is used to pull in NPM packages used in VueSP Starter.
+- **Webpack**: Compiles your VueJS components, CSS and JS down to a single JavaScript app file.
+- **Babel**: Transpiles your ES6 code down to ES5 code compatible with more browsers.
 
-##### <a id="nodejs"></a> NodeJS
+##### Git / GitHub
 
-NodeJS can be installed on most operating systems and allows you to execute Node commands, applications and scripts via the console. This is a common tool to use for developing in many languages. For instance, **VueSP Starter** is a NPM package. NPM is a site/application which manages packages created by developers for all sorts of platforms and languages. The NPM application is built using NodeJS. Therefore we can use NodeJS to execute a NPM command that allows users to install **VueSP Starter**.
+GIT is a version/change management application which keeps track of all the changes you make to a project. This is a console application that can be installed onto Windows and many other operating systems.
+
+> More Details: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>
+
+GitHub is a repository service used to store the VueSP Starter application.
+
+> More Details: <a href="https://github.com/">https://github.com/</a>
+
+##### NodeJS
+
+NodeJS can be installed on most operating systems and allows you to execute Node commands, applications and scripts via the console. This is a common tool to use for developing in many languages. For instance, **VueSP Starter** is stored on a GIT repository without any of the required NPM packages. NPM is a site/application which manages packages created by developers for all sorts of platforms and languages. The NPM application is built using NodeJS. Therefore, once the GIT repository is downloaded, we can use NodeJS to execute a NPM command that allows users to install required NPM packages.
 
 In addition, NodeJS allows us to use other tools such as those explained below.
 
-More Details: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>
+> More Details: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a>
 
-##### <a id="npm"></a> NPM
+##### NPM
 
-NPM (Node Package Manager) is a NodeJS application/site that stores and manages your application package to make it easier to install. In addition, since one NPM package can utilize and require other NPM packages, NPM helps manage all those connections and relationships for the user. **VueSP Starter** uses a number of NPM packages.
+NPM (Node Package Manager) is a NodeJS application/site that stores and manages libraries and application packages to make it easier to install. In addition, since one NPM package can utilize and require other NPM packages, NPM helps manage all those connections and relationships for the user. **VueSP Starter** uses a number of NPM packages.
 
-More Details: <a href="https://www.npmjs.com/">https://www.npmjs.com/</a>
+> More Details: <a href="https://www.npmjs.com/">https://www.npmjs.com/</a>
 
-##### <a id="webpack"></a> Webpack
+##### Webpack
 
 Webpack is a NodeJS application which specializes in combining all of your application components into a single file. This includes, JavaScript files, Vue component files, CSS & SASS files and more into a single JavaScript file.
 
@@ -72,13 +83,13 @@ Into this:
 <script src="myBundle.js"></script>
 ```
 
-More Details: <a href="https://webpack.js.org/">https://webpack.js.org/</a>
+> More Details: <a href="https://webpack.js.org/">https://webpack.js.org/</a>
 
 ##### <a id="babel"></a> Babel
 
 VueSP Starter is coded in JavaScript using ES6 features. These ES6 features are not fully supported by all web browsers. As such, to ensure compatibility with as many browsers as possible we use a transpiler called **Babel** to convert the ES6 code to the ES5 version.
 
-More Details: <a href="https://babeljs.io/">https://babeljs.io/</a>
+> More Details: <a href="https://babeljs.io/">https://babeljs.io/</a>
 
 ---
 
