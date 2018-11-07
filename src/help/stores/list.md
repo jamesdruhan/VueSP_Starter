@@ -2,7 +2,7 @@
 
 This store module is used for the spList mixin which gets both SharePoint list library details and data. Once configured, when the component loads, the List store module will store library information in the setting, column and data state objects.
 
-To learn more about using the spList mixin go <a href="./src/help/mixins/spList.md">here</a>.
+To learn more about using the spList mixin go <a href="../mixins/spList.md">here</a>.
 
 ### **State**
 - *setting [Object]*: Holds one or more SharePoint list library settings. The settings are stored in a key of the library title.

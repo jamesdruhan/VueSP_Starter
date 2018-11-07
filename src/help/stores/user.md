@@ -2,7 +2,7 @@
 
 This store module holds details of the current user accessing the application. It is used by and populated via the spUser mixin.
 
-To learn more about using the spUser mixin go <a href="./src/help/mixins/spUser.md">here</a>.
+To learn more about using the spUser mixin go <a href="../mixins/spUser.md">here</a>.
 
 ### **State**
 - *user [Object]*: Holds details of the current user.

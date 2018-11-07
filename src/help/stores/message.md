@@ -2,7 +2,7 @@
 
 This store module holds details outlining when and how to show the spMessenger component. This is a popup (modal style) component that allows you to easily notify users.
 
-To learn more about using the spMessenger mixin go <a href="./src/help/mixins/spMessenger.md">here</a>.
+To learn more about using the spMessenger mixin go <a href="../mixins/spMessenger.md">here</a>.
 
 ### **State**
 - *visible [Boolean]*: Indicates if the message is shown or not.
