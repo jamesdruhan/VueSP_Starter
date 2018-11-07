@@ -189,10 +189,10 @@ Vuex should not be disabled in VueSP Starter as it is integrated into nearly all
 
 **Available Stores**:
 
-- <a href="./src/help/stores/app.md">App</a>
-- <a href="./src/help/stores/list.md">List</a>
-- <a href="./src/help/stores/message.md">Message</a>
-- <a href="./src/help/stores/user.md">User</a>
+- <a href="./stores/app.md">App</a>
+- <a href="./stores/list.md">List</a>
+- <a href="./stores/message.md">Message</a>
+- <a href="./stores/user.md">User</a>
 
 **To Configure**:
 
@@ -235,11 +235,11 @@ Mixins are reusable component code which is combined with your component. A mixi
 
 **Available Mixins**:
 
-- <a href="./src/help/mixins/app.md">App</a>
-- <a href="./src/help/mixins/spList.md">spList</a>
-- <a href="./src/help/mixins/spMessenger.md">spMessenger</a>
-- <a href="./src/help/mixins/spUI.md">spUI</a>
-- <a href="./src/help/mixins/spUser.md">spUser</a>
+- <a href="./mixins/app.md">App</a>
+- <a href="./mixins/spList.md">spList</a>
+- <a href="./mixins/spMessenger.md">spMessenger</a>
+- <a href="./mixins/spUI.md">spUI</a>
+- <a href="./mixins/spUser.md">spUser</a>
 
 **Default**: By default, the App.vue (primary component) utilizes the App mixin (appMix). This mixin utilizes spUI, spUser and spList mixins to perform specific tasks when the application is loaded. Review each of the mixin details to see what features are offered.
 
@@ -249,15 +249,15 @@ VueSP Starter includes a number of helpful components which helps reduce develop
 
 **Available Components**:
 
-- <a href="./src/help/components/spLoader.md">Loader</a>
-- <a href="./src/help/components/spMessenger.md">Messenger</a>
-- <a href="./src/help/components/spTable.md">Table</a>
-- <a href="./src/help/components/spForm.md">Form</a>
-	- <a href="./src/help/components/spFormTitle.md">Title</a>
-	- <a href="./src/help/components/spFormSubTitle.md">Sub-Title</a>
-	- <a href="./src/help/components/spFormButton.md">Button</a>
-	- <a href="./src/help/components/spFormInputText.md">Input: Text</a>
-	- <a href="./src/help/components/spFormInputNote.md">Input: Note</a>
-	- <a href="./src/help/components/spFormInputUser.md">Input: User</a>
-	- <a href="./src/help/components/spFormInputMultiChoice.md">Input: Multi-Choice</a>
-	- <a href="./src/help/components/spFormControls.md">Controls</a>
+- <a href="./components/spLoader.md">Loader</a>
+- <a href="./components/spMessenger.md">Messenger</a>
+- <a href="./components/spTable.md">Table</a>
+- <a href="./components/spForm.md">Form</a>
+	- <a href="./components/spFormTitle.md">Title</a>
+	- <a href="./components/spFormSubTitle.md">Sub-Title</a>
+	- <a href="./components/spFormButton.md">Button</a>
+	- <a href="./components/spFormInputText.md">Input: Text</a>
+	- <a href="./components/spFormInputNote.md">Input: Note</a>
+	- <a href="./components/spFormInputUser.md">Input: User</a>
+	- <a href="./components/spFormInputMultiChoice.md">Input: Multi-Choice</a>
+	- <a href="./components/spFormControls.md">Controls</a>
