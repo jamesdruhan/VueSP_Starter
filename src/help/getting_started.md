@@ -235,11 +235,11 @@ Mixins are reusable component code which is combined with your component. A mixi
 
 **Available Mixins**:
 
-- <a href="./stores/app.md">App</a>
-- <a href="./stores/spList.md">spList</a>
-- <a href="./stores/spMessenger.md">spMessenger</a>
-- <a href="./stores/spUI.md">spUI</a>
-- <a href="./stores/spUser.md">spUser</a>
+- <a href="./src/help/mixins/app.md">App</a>
+- <a href="./src/help/mixins/spList.md">spList</a>
+- <a href="./src/help/mixins/spMessenger.md">spMessenger</a>
+- <a href="./src/help/mixins/spUI.md">spUI</a>
+- <a href="./src/help/mixins/spUser.md">spUser</a>
 
 **Default**: By default, the App.vue (primary component) utilizes the App mixin (appMix). This mixin utilizes spUI, spUser and spList mixins to perform specific tasks when the application is loaded. Review each of the mixin details to see what features are offered.
 
@@ -249,15 +249,15 @@ VueSP Starter includes a number of helpful components which helps reduce develop
 
 **Available Components**:
 
-- <a href="./comonents/spLoader.md">Loader</a>
-- <a href="./comonents/spMessenger.md">Messenger</a>
-- <a href="./comonents/spTable.md">Table</a>
-- <a href="./comonents/spForm.md">Form</a>
-	- <a href="./comonents/spFormTitle.md">Title</a>
-	- <a href="./comonents/spFormSubTitle.md">Sub-Title</a>
-	- <a href="./comonents/spFormButton.md">Button</a>
-	- <a href="./comonents/spFormInputText.md">Input: Text</a>
-	- <a href="./comonents/spFormInputNote.md">Input: Note</a>
-	- <a href="./comonents/spFormInputUser.md">Input: User</a>
-	- <a href="./comonents/spFormInputMultiChoice.md">Input: Multi-Choice</a>
-	- <a href="./comonents/spFormControls.md">Controls</a>
+- <a href="./src/help/components/spLoader.md">Loader</a>
+- <a href="./src/help/components/spMessenger.md">Messenger</a>
+- <a href="./src/help/components/spTable.md">Table</a>
+- <a href="./src/help/components/spForm.md">Form</a>
+	- <a href="./src/help/components/spFormTitle.md">Title</a>
+	- <a href="./src/help/components/spFormSubTitle.md">Sub-Title</a>
+	- <a href="./src/help/components/spFormButton.md">Button</a>
+	- <a href="./src/help/components/spFormInputText.md">Input: Text</a>
+	- <a href="./src/help/components/spFormInputNote.md">Input: Note</a>
+	- <a href="./src/help/components/spFormInputUser.md">Input: User</a>
+	- <a href="./src/help/components/spFormInputMultiChoice.md">Input: Multi-Choice</a>
+	- <a href="./src/help/components/spFormControls.md">Controls</a>
