@@ -1,7 +1,7 @@
 ## Store Module: App
 This store holds a state variable indicating whether or not the application is loaded. This is based on the tasks performed in the App mixin and includes various basic tasks such as getting user information and list details/data.
 
-To learn more about using the App mixin go <a href="../nixins/app.md">here</a>.
+To learn more about using the App mixin go <a href="./src/help/mixins/app.md">here</a>.
 
 ### **State**
 - *isLoaded [Boolean]*: Indicates if the application is loaded or not (still waiting for tasks to complete).
