@@ -189,10 +189,10 @@ Vuex should not be disabled in VueSP Starter as it is integrated into nearly all
 
 **Available Stores**:
 
-- <a href="./stores/app.md">App</a>
-- <a href="./stores/list.md">List</a>
-- <a href="./stores/message.md">Message</a>
-- <a href="./stores/user.md">User</a>
+- <a href="./src/help/stores/app.md">App</a>
+- <a href="./src/help/stores/list.md">List</a>
+- <a href="./src/help/stores/message.md">Message</a>
+- <a href="./src/help/stores/user.md">User</a>
 
 **To Configure**:
 
